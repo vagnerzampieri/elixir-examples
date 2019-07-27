@@ -1,0 +1,62 @@
+iex(1)> 5
+5
+iex(2)> 10/3
+3.3333333333333335
+iex(3)> div(10, 3)
+3
+iex(4)> 0x4A
+74
+iex(5)> rem(10, 2)
+0
+iex(6)> rem(10, 3)
+1
+iex(7)> rem(10, 7)
+3
+iex(8)> <<1,2>> <> <<3>>
+<<1, 2, 3>>
+iex(9)> "Hello " <> "World"
+"Hello World"
+iex(10)> [head | tails] = [1,2,3,4,5,6,7]
+[1, 2, 3, 4, 5, 6, 7]
+iex(11)> head
+1
+iex(12)> tails
+[2, 3, 4, 5, 6, 7]
+iex(13)> 1..10
+1..10
+iex(14)> l..u = 1..10
+1..10
+iex(15)> l
+1
+iex(16)> u
+10
+iex(17)> :w
+:w
+iex(18)> h = %{"json" => "javascript", "hashmap" => "elixir"}
+%{"hashmap" => "elixir", "json" => "javascript"}
+iex(19)> h["json"]
+"javascript"
+iex(20)> h.json
+** (KeyError) key :json not found in: %{"hashmap" => "elixir", "json" => "javascript"}
+
+iex(20)> h = %{json: "javascript", hashmap: "elixir"}
+%{hashmap: "elixir", json: "javascript"}
+iex(21)> h.json
+"javascript"
+iex(22)> s = fn(x) -> x * x end
+#Function<7.91303403/1 in :erl_eval.expr/5>
+iex(23)> s.(100)
+10000
+iex(25)> Range.new(1, 10) |> Enum.map(fn x -> x * 2 end)                                [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+iex(26)> Range.new(1, 10) |> Enum.map(fn x -> x * 2 end) |> Enum.filter(fn x -> rem(x, 3) == 0 end)
+[6, 12, 18]
+iex(27)> f = fn -> 2 * 8 end
+#Function<21.91303403/0 in :erl_eval.expr/5>
+iex(28)> spawn(f)
+#PID<0.140.0>
+
+
+
+## Concurrency
+
+example on rectangle.ex file
