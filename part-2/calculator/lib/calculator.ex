@@ -6,20 +6,20 @@ defmodule Calculator do
   @doc """
   ## Examples
 
-      iex> pid = Calculator.start
-      #PID<0.138.0>
+  #   iex> server_id = Calculator.start
+  #   #PID<0.138.0>
 
-      iex> Calculator.add(pid, 10)
-      10
+  #   iex> Calculator.add(server_id, 10)
+  #   10
 
-      iex> Calculator.sub(pid, 5)
-      5
+  #   iex> Calculator.sub(server_id, 5)
+  #   5
 
-      iex> Calculator.mult(pid, 10)
-      50
+  #   iex> Calculator.mult(server_id, 10)
+  #   50
 
-      iex> Calculator.div(pid, 10)
-      5.0
+  #   iex> Calculator.div(server_id, 10)
+  #   5.0
 
   """
   def start do
